@@ -15,13 +15,23 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<div className="search-bar ui segment">
-				<form onSubmit={this.onFormSubmit} className="ui form">
-					<div className="field">
-						<label>Video Search</label>
-						<input type="text" value={this.state.term} onChange={this.onInputChange} />
+			<div className="col-md-12">
+				<div className="card text-white bg-primary mb-3">
+					<div className="card-header">Video Search</div>
+					<div className="card-body">
+						<form onSubmit={this.onFormSubmit}>
+							<div className="form-group">
+								<input
+									type="text"
+									value={this.state.term}
+									onChange={this.onInputChange}
+									className="form-control"
+									placeholder="What do you want to see?"
+								/>
+							</div>
+						</form>
 					</div>
-				</form>
+				</div>
 			</div>
 		);
 	}

@@ -23,18 +23,34 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="ui container">
-				<SearchBar onTermSubmit={this.onTermSubmit} />
-				<div className="ui grid">
-					<div className="ui row">
-						<div className="eleven wide column">
+			<div>
+				<div className="container">
+					<div className="row mt-3 justify-content-center">
+						<div className="col-md-12">
+							<h2 className="text-center text-danger">Youtube Video App</h2>
+						</div>
+					</div>
+					<div className="row">
+						<SearchBar onTermSubmit={this.onTermSubmit} />
+					</div>
+					<div className="row">
+						<div className="col-md-8">
 							<VideoDetail video={this.state.selectedVideo} />
 						</div>
-						<div className="five wide column">
+						<div className="col-md-4">
 							<VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} />
 						</div>
 					</div>
 				</div>
+				<footer className="footer text-center">
+					<div className="container">
+						<span className="text-muted">
+							<a href="https://github.com/miguemartelo" target="_blank" rel="noopener noreferrer">
+								By: MigueMartelo
+							</a>
+						</span>
+					</div>
+				</footer>
 			</div>
 		);
 	}
